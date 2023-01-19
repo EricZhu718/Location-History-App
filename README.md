@@ -4,7 +4,7 @@ Have you ever forgotten where you were yesterday and simply couldn't recall no m
 
 
 
-![IMG_2029](https://user-images.githubusercontent.com/49328304/213342749-99df2de8-430c-4cdc-b8d9-2853ad0e5188.png | width = 200)
+<img src = "https://user-images.githubusercontent.com/49328304/213342749-99df2de8-430c-4cdc-b8d9-2853ad0e5188.png" width = 50%, height = 50%)
 ![IMG_2028](https://user-images.githubusercontent.com/49328304/213342770-a2e1f3a3-ea9c-49c8-bae1-e02854726453.png)
 ![IMG_2031](https://user-images.githubusercontent.com/49328304/213342785-443e3987-53d2-4e1b-9561-07f9faa2aaa5.png)
 ![IMG_2032](https://user-images.githubusercontent.com/49328304/213342796-5800613f-995b-4262-b454-8fa65f71853a.png)
