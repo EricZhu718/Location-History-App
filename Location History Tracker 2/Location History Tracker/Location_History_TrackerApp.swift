@@ -97,6 +97,42 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     }
 }
 
+func getMenuItems() -> [menuItem]{
+    var menuItems:[menuItem] = []
+    var keys:[String] = []
+    let locs = getSavedLocationPins() ?? []
+    
+    var ourDict:[String:menuItem] = [:]
+    for val in locs {
+        let components = Calendar.current.dateComponents([.year, .month, .day], from: val.date)
+        // print(components)
+        if let year = components.year, let month = components.month, let day = components.day {
+            let key = String(year) + " " + String(month) + " " + String(day)
+            let desc =  DateFormatter().monthSymbols[month - 1] + " \(day), \(year)"
+            
+            var retrieved = (ourDict[key] ?? menuItem(day: day, month: month, year: year, description: desc, pins: []))
+            
+            
+            
+            retrieved.pins.append(val)
+            ourDict[key] = retrieved
+            if (!keys.contains(key)) {
+                keys.append(key)
+            }
+        }
+    }
+    keys = keys.sorted(by: >)
+    // print(ourDict)
+    // print(keys)
+    
+    for key in keys {
+        menuItems.append(ourDict[key]!)
+    }
+    print(menuItems)
+    
+    return menuItems
+}
+
 @main
 struct Location_History_TrackerApp: App {
     var menuItems:[menuItem] = []
@@ -104,42 +140,11 @@ struct Location_History_TrackerApp: App {
 
     
     init() {
-        // Load location pins
-        var keys:[String] = []
-        let locs = getSavedLocationPins() ?? []
-        
-        var ourDict:[String:menuItem] = [:]
-        for val in locs {
-            let components = Calendar.current.dateComponents([.year, .month, .day], from: val.date)
-            // print(components)
-            if let year = components.year, let month = components.month, let day = components.day {
-                let key = String(year) + " " + String(month) + " " + String(day)
-                let desc =  DateFormatter().monthSymbols[month - 1] + " \(day), \(year)"
-                
-                var retrieved = (ourDict[key] ?? menuItem(day: day, month: month, year: year, description: desc, pins: []))
-                
-                
-                
-                retrieved.pins.append(val)
-                ourDict[key] = retrieved
-                if (!keys.contains(key)) {
-                    keys.append(key)
-                }
-            }
-        }
-        keys = keys.sorted(by: >)
-        // print(ourDict)
-        // print(keys)
-        
-        for key in keys {
-            menuItems.append(ourDict[key]!)
-        }
-        print(menuItems)
     }
     
     var body: some Scene {
         WindowGroup {
-            ContentView(menuItems: menuItems)
+            ContentView()
         }
     }
 }

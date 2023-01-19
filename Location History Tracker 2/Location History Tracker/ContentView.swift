@@ -14,8 +14,8 @@ import MapKit
 struct ContentView: View {
     @State var menuOpen = false
     
-    @State var items:[menuItem]
-    @State var droppedPins:[LocationPin]
+    @State var items:[menuItem] = getMenuItems()
+    @State var droppedPins:[LocationPin] = []
     @State var region  = MKCoordinateRegion(
         center:
             CLLocationCoordinate2D(
@@ -27,13 +27,11 @@ struct ContentView: View {
                 longitudeDelta: 0.4)
     )
     
+    @Environment(\.colorScheme) var colorScheme
     
-    
-    init(menuItems:[menuItem]) {
-        items = menuItems
-        droppedPins = []
+    init() {
+        // Load location pins
     }
-    
     
     var body: some View {
         GeometryReader { geometry in
@@ -61,16 +59,9 @@ struct ContentView: View {
                             Spacer().frame(width: 250)
                             Text("")
                         }
-                        Spacer().frame(height: 10)
-                        Spacer()// Text("Location on: ")
-                            .frame(height:40)
-                            .font(.title2)
-                            .padding(10)
-                            // .background(.gray)
-                            .cornerRadius(20)
-                            .shadow(color: .gray, radius: 10)
+                        // Spacer().frame(height: 10)
                         Spacer()
-                    }
+                        .background(colorScheme == .dark ? .black : .white)                    }
                 }.onTapGesture {
                     menuOpen = false
                 }
@@ -79,12 +70,17 @@ struct ContentView: View {
                     if (items.count == 0) {
                         VStack {
                             Text("No Previous Locations Available").transition(.move(edge: .leading)).frame(width: geometry.size.width/3*2)
-                            Spacer()
-                        }.frame(width: geometry.size.width/3*2).background(.black).transition(.move(edge: .leading))
+                            Spacer().background(colorScheme == .dark ? .black : .white)
+                            
+                        }
+                            .frame(width: geometry.size.width/3*2)
+                            .background(colorScheme == .dark ? .black : .white)
+                            .transition(.move(edge: .leading))
                         
                     } else {
                         VStack{
-                            Text("Select Locations from History:")
+                            Text("Select Locations from History:").frame(width: geometry.size.width/3*2)
+                                .background(colorScheme == .dark ? .black : .white)
                             List(items) {
                                 item in Button(
                                     action: {
@@ -102,7 +98,9 @@ struct ContentView: View {
                                     }
                                 )
                             }
-                        }.frame(width: geometry.size.width/3*2).background(.black).transition(.move(edge: .leading))
+                        }.frame(width: geometry.size.width/3*2)
+                            .background(colorScheme == .dark ? .black : .white)
+                            .transition(.move(edge: .leading))
                     }
                 }
             }
