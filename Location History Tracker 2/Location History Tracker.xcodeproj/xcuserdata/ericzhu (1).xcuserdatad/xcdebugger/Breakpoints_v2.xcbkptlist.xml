@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "C50EB2C4-1CC6-4E57-BE1B-2016849211ED"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3366ED6F-8C85-48AD-B545-0DDB0324D0D8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Location History Tracker/Location_History_TrackerApp.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "3366ED6F-8C85-48AD-B545-0DDB0324D0D8 - 5f277244ef68198d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Location_History_Tracker.Location_History_TrackerApp.body.getter : some"
+                  moduleName = "Location History Tracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ericzhu/Desktop/Location%20History%20Tracker%202/Location%20History%20Tracker/Location_History_TrackerApp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "252">
+               </Location>
+               <Location
+                  uuid = "3366ED6F-8C85-48AD-B545-0DDB0324D0D8 - b89c075be802a9ef"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; Location_History_Tracker.ContentView in Location_History_Tracker.Location_History_TrackerApp.body.getter : some"
+                  moduleName = "Location History Tracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ericzhu/Desktop/Location%20History%20Tracker%202/Location%20History%20Tracker/Location_History_TrackerApp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "80">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F2AB5883-2393-4799-94FA-D282F9B36913"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Location History Tracker/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "F2AB5883-2393-4799-94FA-D282F9B36913 - 66143d7ac03b5d88"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Location_History_Tracker.ContentView.body.getter : some"
+                  moduleName = "Location History Tracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ericzhu/Desktop/Location%20History%20Tracker%202/Location%20History%20Tracker/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  uuid = "F2AB5883-2393-4799-94FA-D282F9B36913 - 4d951120224389e7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (SwiftUI.GeometryProxy) -&gt; SwiftUI.ZStack&lt;&lt;&lt;opaque return type of SwiftUI.View.overlay&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(alignment: SwiftUI.Alignment, content: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0&gt; in Location_History_Tracker.ContentView.body.getter : some"
+                  moduleName = "Location History Tracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ericzhu/Desktop/Location%20History%20Tracker%202/Location%20History%20Tracker/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "688">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
